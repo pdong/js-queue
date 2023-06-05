@@ -1,0 +1,34 @@
+{
+  "author": "oss@fastly.com",
+  "bugs": {
+    "url": "https://github.com/fastly/compute-starter-kit-javascript-queue/issues"
+  },
+  "dependencies": {
+    "@fastly/js-compute": "^1.5.1",
+    "@upstash/redis": "^1.19.3",
+    "jws": "^4.0.0"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "engines": {
+    "node": "^18.0.0"
+  },
+  "homepage": "https://developer.fastly.com/solutions/starters/compute-starter-kit-javascript-queue",
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "compute-starter-kit-javascript-queue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastly/compute-starter-kit-javascript-queue.git"
+  },
+  "scripts": {
+    "prebuild": "webpack",
+    "build": "js-compute-runtime bin/index.js bin/main.wasm",
+    "deploy": "fastly compute publish"
+  },
+  "version": "1.0.0-pre"
+}
